@@ -460,9 +460,16 @@
 					height: 500px;
 				}
 			}
+
+			.service-tile {
+				cursor: pointer;
+			}
+			#brand {
+				cursor: default;
+			}
 		</style>
 	</head>
-	<body>
+	<body onload="if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {toggleTheme()}">
 		<header>
 			<div id="burger-menu" onclick="toggleNav()">☰</div>
 			<div id="brand">GTS</div>
@@ -577,7 +584,7 @@
 			</div>
 		</footer>
 		<div class="copyright">
-			<p>В© 2023 Great Technological Syndicate</p>
+			<p>© 2023 Great Technological Syndicate</p>
 		</div> 
 		<script>
 			function toggleTheme() {
